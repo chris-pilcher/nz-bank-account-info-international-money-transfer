@@ -1,4 +1,4 @@
-# nz-bank-account-information-international-money-transfer
+# nz-bank-account-info-international-money-transfer
 
 [![npm](https://img.shields.io/npm/v/@fnzc/nz-bank-account-validator.svg)](https://www.npmjs.com/package/@fnzc/nz-bank-account-validator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
