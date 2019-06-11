@@ -19,3 +19,11 @@ yarn add nz-bank-account-information-international-money-transfer
 
 ## Usage
 
+## Development
+
+`npm install`
+
+`npm install jest --global`
+
+`npm run test`
+
