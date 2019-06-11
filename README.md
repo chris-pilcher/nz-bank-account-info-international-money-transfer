@@ -5,7 +5,7 @@
 
 TODO: Badges - Build Status Travis CI, Coverage: coveralls.io
 
-A lightweight JavaScript library to generate information needed to provide an overseas bank to send an International Money Transfer to your New Zealand bank account
+A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.
 
 ## Installation
 
