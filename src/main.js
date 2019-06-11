@@ -74,6 +74,9 @@ function generate(accountNumber) {
       .join(" ")}`;
   }
   console.log(bankDetails);
+  return {
+    ...bankDetails
+  };
 }
 
 module.exports = generate;
