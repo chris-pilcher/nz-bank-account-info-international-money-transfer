@@ -11,3 +11,5 @@ test('does not throw exception when given unknown bank account', () => {
 		generate('01-902-0068389-00');
 	}).not.toThrow();
 });
+
+// https://github.com/wytlytningNZ/NZ-Bank-Account-Validator/blob/master/test/library.spec.js
