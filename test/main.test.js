@@ -13,3 +13,4 @@ test("does not throw exception when given unknown bank account", () => {
 });
 
 // https://github.com/wytlytningNZ/NZ-Bank-Account-Validator/blob/master/test/library.spec.js
+// https://jestjs.io/docs/en/next/api.html#testeachtable-name-fn
