@@ -12,19 +12,8 @@ test("does not throw exception when given unknown bank account", () => {
   }).not.toThrow();
 });
 
-const anzTestData = {
-  name: "ANZ",
-  swift: "ANZBNZ22",
-  address:
-    "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand"
-};
-
-test.each`
-  accountNumber  | expected
-  ${'01-902-0068389-00'} | ${anzTestData}
-`(
-  "returns $expected when given $accountNumber",
-  ({ accountNumber, expected }) => {
+test.each([["01-902-0068389-00",  { name: "ANZ", swift: "ANZBNZ22", address: "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand" }]])(
+  'generate(%s) returns expected', (accountNumber, expected) => {
     expect(generate(accountNumber)).toEqual(expected);
   }
 );

@@ -73,7 +73,7 @@ function generate(accountNumber) {
       .map(bankKey => `${bankMapping[bankKey].name} (${bankKey})`)
       .join(" ")}`;
   }
-  console.log(bankDetails);
+
   return {
     ...bankDetails
   };
