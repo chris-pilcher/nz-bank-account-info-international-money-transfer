@@ -75,7 +75,10 @@ function generate(accountNumber) {
   }
 
   return {
-    ...bankDetails
+    ...bankDetails,
+    beneficiaryAccount: `${bank}-${branch}-${account}-${suffix}`,
+    bsbSortCode: `${bank}-${branch}`,
+    iban: `${bank}-${branch}-${account}-${suffix}`
   };
 }
 
