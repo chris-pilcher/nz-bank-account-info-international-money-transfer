@@ -10,13 +10,13 @@ A lightweight JavaScript library to generate information needed for an Internati
 ## Installation
 
 ```
-npm install --save nz-bank-account-information-international-money-transfer
+npm install --save nz-bank-account-info-international-money-transfer
 ```
 
 or
 
 ```
-yarn add nz-bank-account-information-international-money-transfer
+yarn add nz-bank-account-info-international-money-transfer
 ```
 
 ## Usage
