@@ -5,6 +5,7 @@
 [![Travis CI][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
+
 A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.
 
 ## Installation
@@ -33,7 +34,7 @@ yarn add nz-bank-account-info-international-money-transfer
 [npm-url]: https://www.npmjs.com/package/nz-bank-account-info-international-money-transfer
 [license-image]: https://img.shields.io/badge/License-MIT-green.svg
 [license-url]: https://opensource.org/licenses/MIT
-[travis-image]: https://img.shields.io/travis/chris-pilcher/nz-bank-account-info-international-money-transfer/master.svg
+[travis-image]: https://img.shields.io/travis/chris-pilcher/nz-bank-account-info-international-money-transfer/develop.svg
 [travis-url]: https://travis-ci.org/chris-pilcher/nz-bank-account-info-international-money-transfer
-[coveralls-image]: https://coveralls.io/repos/github/chris-pilcher/nz-bank-account-info-international-money-transfer/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/r/chris-pilcher/nz-bank-account-info-international-money-transfer?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/chris-pilcher/nz-bank-account-info-international-money-transfer/badge.svg?branch=develop
+[coveralls-url]: https://coveralls.io/r/chris-pilcher/nz-bank-account-info-international-money-transfer?branch=develop
