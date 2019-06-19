@@ -1,6 +1,6 @@
 # nz-bank-account-info-international-money-transfer
 
-[![npm](https://img.shields.io/npm/v/@fnzc/nz-bank-account-validator.svg)](https://www.npmjs.com/package/@fnzc/nz-bank-account-validator)
+[![npm](https://img.shields.io/npm/v/nz-bank-account-info-international-money-transfer.svg)](https://www.npmjs.com/package/nz-bank-account-info-international-money-transfer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 TODO: Badges - Build Status Travis CI, Coverage: coveralls.io
@@ -12,7 +12,9 @@ A lightweight JavaScript library to generate information needed for an Internati
 ```
 npm install --save nz-bank-account-information-international-money-transfer
 ```
+
 or
+
 ```
 yarn add nz-bank-account-information-international-money-transfer
 ```
@@ -26,4 +28,3 @@ yarn add nz-bank-account-information-international-money-transfer
 `npm install jest --global`
 
 `npm run test`
-
