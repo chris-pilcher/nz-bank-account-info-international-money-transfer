@@ -1,0 +1,33 @@
+{
+  "name": "nz-bank-account-info-international-money-transfer",
+  "version": "0.0.1",
+  "description": "A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-pilcher/nz-bank-account-info-international-money-transfer.git"
+  },
+  "keywords": [
+    "nz",
+    "bank",
+    "international",
+    "money",
+    "transfer"
+  ],
+  "author": "Chris Pilcher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chris-pilcher/nz-bank-account-info-international-money-transfer/issues"
+  },
+  "homepage": "https://github.com/chris-pilcher/nz-bank-account-info-international-money-transfer#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "nz-bank-account-validator": "0.0.4"
+  }
+}
