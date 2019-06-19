@@ -9,7 +9,7 @@ before_script:
   - npm install -g jest@24.8.0
 script:
   # Run test script
-  - npm run test
+  - npm run test-ci
   # Run linting
 #  - npm run lint TODO
 # after_script:

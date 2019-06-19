@@ -4,7 +4,8 @@
   "description": "A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.",
   "main": "lib/generate.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-ci": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/chris-pilcher/nz-bank-account-info-international-money-transfer#readme",
   "devDependencies": {
     "@types/jest": "^24.0.13",
+    "coveralls": "^3.0.4",
     "jest": "^24.8.0"
   },
   "dependencies": {
