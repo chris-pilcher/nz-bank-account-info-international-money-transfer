@@ -1,21 +1,39 @@
 # nz-bank-account-info-international-money-transfer
 
-[![npm](https://img.shields.io/npm/v/@fnzc/nz-bank-account-validator.svg)](https://www.npmjs.com/package/@fnzc/nz-bank-account-validator)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![NPM Version][npm-image]][npm-url]
+[![License: MIT][license-image]][license-url]
+[![Travis CI][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
 
-TODO: Badges - Build Status Travis CI, Coverage: coveralls.io
-
-A lightweight JavaScript library to generate information needed to provide an overseas bank to send an International Money Transfer to your New Zealand bank account
+A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.
 
 ## Installation
 
 ```
-npm install --save nz-bank-account-information-international-money-transfer
+npm install --save nz-bank-account-info-international-money-transfer
 ```
+
 or
+
 ```
-yarn add nz-bank-account-information-international-money-transfer
+yarn add nz-bank-account-info-international-money-transfer
 ```
 
 ## Usage
 
+## Development
+
+`npm install`
+
+`npm install jest --global`
+
+`npm run test`
+
+[npm-image]: https://img.shields.io/npm/v/nz-bank-account-info-international-money-transfer.svg
+[npm-url]: https://www.npmjs.com/package/nz-bank-account-info-international-money-transfer
+[license-image]: https://img.shields.io/badge/License-MIT-green.svg
+[license-url]: https://opensource.org/licenses/MIT
+[travis-image]: https://img.shields.io/travis/chris-pilcher/nz-bank-account-info-international-money-transfer/master.svg
+[travis-url]: https://travis-ci.org/chris-pilcher/nz-bank-account-info-international-money-transfer
+[coveralls-image]: https://coveralls.io/repos/github/chris-pilcher/nz-bank-account-info-international-money-transfer/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/r/chris-pilcher/nz-bank-account-info-international-money-transfer?branch=master
