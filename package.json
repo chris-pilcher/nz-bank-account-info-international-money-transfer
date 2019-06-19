@@ -1,8 +1,8 @@
 {
   "name": "nz-bank-account-info-international-money-transfer",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.",
-  "main": "src/main.js",
+  "main": "lib/generate.js",
   "scripts": {
     "test": "jest"
   },
@@ -29,5 +29,11 @@
   },
   "dependencies": {
     "nz-bank-account-validator": "0.0.4"
-  }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "lib/"
+  ]
 }
