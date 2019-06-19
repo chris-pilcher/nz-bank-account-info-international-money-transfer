@@ -35,5 +35,5 @@ yarn add nz-bank-account-info-international-money-transfer
 [license-url]: https://opensource.org/licenses/MIT
 [travis-image]: https://img.shields.io/travis/chris-pilcher/nz-bank-account-info-international-money-transfer/master.svg
 [travis-url]: https://travis-ci.org/chris-pilcher/nz-bank-account-info-international-money-transfer
-[coveralls-image]: https://img.shields.io/coveralls/chris-pilcher/nz-bank-account-info-international-money-transfer/master.svg
+[coveralls-image]: https://coveralls.io/repos/github/chris-pilcher/nz-bank-account-info-international-money-transfer/badge.svg?branch=master
 [coveralls-url]: https://coveralls.io/r/chris-pilcher/nz-bank-account-info-international-money-transfer?branch=master
