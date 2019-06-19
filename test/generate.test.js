@@ -1,4 +1,4 @@
-const generate = require("../src/main");
+const generate = require("../lib/generate");
 
 test("throws exception when given invalid bank account number", () => {
   expect(() => {
