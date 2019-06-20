@@ -1,4 +1,4 @@
-const bankValidator = require("nz-bank-account-validator/lib/NZ-Bank-Account-Validator");
+import bankValidator from "nz-bank-account-validator/lib/NZ-Bank-Account-Validator";
 
 let bankMapping = {
   "01": {
