@@ -1,4 +1,4 @@
-import generate from '../src/generate';
+import generate from "../src/generate";
 
 test("throws exception when given invalid bank account number", () => {
   expect(() => {
