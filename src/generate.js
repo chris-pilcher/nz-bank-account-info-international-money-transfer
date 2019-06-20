@@ -1,7 +1,5 @@
 const bankValidator = require("nz-bank-account-validator/lib/NZ-Bank-Account-Validator");
 
-exports = module.exports = generate;
-
 let bankMapping = {
   "01": {
     name: "ANZ",
@@ -61,7 +59,7 @@ let bankMapping = {
   }
 };
 
-function generate(accountNumber) {
+export default function generate(accountNumber) {
   // TODO: validate account number
   bankValidator.validate(accountNumber);
 
