@@ -60,7 +60,6 @@ let bankMapping = {
 };
 
 export default function generate(accountNumber) {
-  // TODO: validate account number
   bankValidator.validate(accountNumber);
 
   const [bank, branch, account, suffix] = accountNumber.split("-"); // TODO: use bankValidator
