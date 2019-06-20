@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "babel src --presets @babel/preset-env --out-dir dist",
+    "lint": "eslint .",
     "prepublish": "npm run build",
     "test": "jest",
     "test-ci": "jest --coverage --coverageReporters=text-lcov | coveralls"
@@ -34,7 +35,13 @@
     "@types/jest": "^24.0.13",
     "babel-jest": "^24.8.0",
     "coveralls": "^3.0.4",
-    "jest": "^24.8.0"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2"
   },
   "dependencies": {
     "nz-bank-account-validator": "0.0.4"

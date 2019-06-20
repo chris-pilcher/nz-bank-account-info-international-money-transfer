@@ -8,7 +8,5 @@ before_script:
   - npm install -g npm@6.4.1
   - npm install -g jest@24.8.0
 script:
-  # Run test script
   - npm run test-ci
-  # Run linting
-#  - npm run lint TODO
+  - npm run lint
