@@ -6,7 +6,6 @@ cache:
     - node_modules
 before_script:
   - npm install -g npm@6.4.1
-  - npm install -g babel@7.4.4
   - npm install -g jest@24.8.0
 script:
   - npm run test-ci
