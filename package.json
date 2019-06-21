@@ -4,7 +4,7 @@
   "description": "A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "babel src --presets @babel/preset-env --out-dir dist",
+    "build": "./node_modules/.bin/babel src --presets @babel/preset-env --out-dir dist",
     "lint": "eslint .",
     "prepublishOnly": "npm run build",
     "test": "jest",
