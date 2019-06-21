@@ -1,8 +1,6 @@
-const bankValidator = require("nz-bank-account-validator/lib/NZ-Bank-Account-Validator");
+import bankValidator from "nz-bank-account-validator/lib/NZ-Bank-Account-Validator";
 
-exports = module.exports = generate;
-
-let bankMapping = {
+const bankMapping = {
   "01": {
     name: "ANZ",
     swift: "ANZBNZ22",
@@ -61,19 +59,18 @@ let bankMapping = {
   }
 };
 
-function generate(accountNumber) {
-  // TODO: validate account number
+export default function generate(accountNumber) {
   bankValidator.validate(accountNumber);
 
   const [bank, branch, account, suffix] = accountNumber.split("-"); // TODO: use bankValidator
   const bankDetails = bankMapping[bank];
   if (!bankDetails) {
-    throw `Error: Unknown bank ${bank}. Known banks are ${Object.keys(
-      bankMapping
-    )
-      .sort()
-      .map(bankKey => `${bankMapping[bankKey].name} (${bankKey})`)
-      .join(" ")}`;
+    throw new Error(
+      `Error: Unknown bank ${bank}. Known banks are ${Object.keys(bankMapping)
+        .sort()
+        .map(bankKey => `${bankMapping[bankKey].name} (${bankKey})`)
+        .join(" ")}`
+    );
   }
 
   return {

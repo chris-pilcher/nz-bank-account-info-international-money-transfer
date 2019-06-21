@@ -1,9 +1,12 @@
 {
   "name": "nz-bank-account-info-international-money-transfer",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "A lightweight JavaScript library to generate information needed for an International Money Transfer to your New Zealand bank account.",
-  "main": "lib/generate.js",
+  "main": "./dist/index.js",
   "scripts": {
+    "build": "babel src --presets @babel/preset-env --out-dir dist",
+    "lint": "eslint .",
+    "prepublish": "npm run build",
     "test": "jest",
     "test-ci": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
@@ -25,9 +28,20 @@
   },
   "homepage": "https://github.com/chris-pilcher/nz-bank-account-info-international-money-transfer#readme",
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-spread": "^7.2.2",
+    "@babel/preset-env": "^7.4.5",
     "@types/jest": "^24.0.13",
+    "babel-jest": "^24.8.0",
     "coveralls": "^3.0.4",
-    "jest": "^24.8.0"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2"
   },
   "dependencies": {
     "nz-bank-account-validator": "0.0.4"
@@ -35,7 +49,6 @@
   "files": [
     "LICENSE",
     "README.md",
-    "index.js",
-    "lib/"
+    "dist/"
   ]
 }
