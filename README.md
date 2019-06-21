@@ -42,8 +42,8 @@ Steps to create a release `x.y.z` using [GitHub Desktop](https://desktop.github.
    * Click **Draft a new release** button 
    * Type a version number for release
      * Tag version: `x.y.z`
-   * Use the drop-down menu, and select the `release/x.y.z` branch
-     * Target: `release/x.y.z`
+   * Use the drop-down menu, and select the `master` branch
+     * Target: `master`
    * Enter title `x.y.z`
    * Type a description for the release
    * Click **Publish release**
