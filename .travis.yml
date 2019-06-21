@@ -10,11 +10,12 @@ before_script:
 script:
   - npm run test-ci
   - npm run lint
-  - npm run prepublishOnly
+before_deploy:
+  - npm run build
 deploy:
   provider: npm
   email: chris.pilcher.public@outlook.com
   api_key:
     secure: dxYElXAAeloCsmFxFwHsnsTFR1L+pbV3ZGon8H+y1lPXeIdQSDLgdIi2KJ8EDCRTLduSzKxQ2p+bcjk1MnSYmKGzVLE8HxzpTK8xEZUyyoDYiQFpZgWNN6gLl0ePwUr5And0F1rnUYTEU7kX5GeHqWXCz+Tg/aZVokMkBkgZfDd2PJgQ67qZjns6rNt2100h1saAsTV+aBKOQFg8IqLlqNhtrXeS5ZXT6AGpn09O9S0xFzz4SorMchPAqTfVJwmgRhwarVSanH/kusGMth6ic95KCvB7EjlJZJLV+VFboNe4ofYcIpMzhfB8IUZSV93IcFWJpFDeiKdbmY4S5x2yhGTe7jlCMNmIBOn3Z1eWjluw+kjEitObNMbs5HRMPB8tMjpAjdsTl+GUBFcr4oHrUnT9SYoXpTKyZquAeOTkiTME5F616C0+FYr/NADRR58DcqXicyJT/fBhOUlwj0xu3vrR8jqZ8h1B9iQ98frJc8kYBubrrsv8hFmQkQGFgQ6qywDailxCODbUM60u8OEnczKElWJ0l98pZh9Mm2G8mgIUKeaqKO5aEbjt/I2ywKcQtnmw8j23bOqxnou6lweJHaXwx70ALQZiaE3X1L5p9JUJ0BREmXxrkkRwkGUkxG7J7JfasZcMII7TplWG0CYh4kYf8UsnVK7W282/dvq8nR4=
   on:
-    tags: true
+    all_branches: true
