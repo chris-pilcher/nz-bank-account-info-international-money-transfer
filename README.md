@@ -38,7 +38,8 @@ Steps to create a release `x.y.z` using [GitHub Desktop](https://desktop.github.
 2. Open code editor and update `version` in `package.json` to `x.y.z`. Push <kbd>Ctrl</kbd> + <kbd>P</kbd>.
 3. Merge changes from `develop` into `master`. 
    * Checkout `master` branch. Merge `develop` into `master` <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>. Push <kbd>Ctrl</kbd> + <kbd>P</kbd>.
-4. Open [GitHub Releases](https://github.com/chris-pilcher/nz-bank-account-info-international-money-transfer/releases) and create release
+4. Create Release
+   * Navigate to [GitHub Releases](https://github.com/chris-pilcher/nz-bank-account-info-international-money-transfer/releases)
    * Click **Draft a new release** button 
    * Type a version number for release
      * Tag version: `x.y.z`
