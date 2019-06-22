@@ -3,7 +3,11 @@ import generate from "../src/generate";
 test("throws exception when given invalid bank account number", () => {
   expect(() => {
     generate("44-1234-0012345-00");
-  }).toThrow();
+  }).toThrow(
+    "Error: Unknown bank 44. Known banks are ANZ (01) BNZ (02) Westpac (03) National Bank of New Zealand " +
+      "(06) National Australia Bank (08) Industrial and Commercial Bank of China (10) ASB (12) TSB (15) HSBC (30) " +
+      "Citibank (31) Kiwibank (38)"
+  );
 });
 
 // TODO: test cases such as: 01-902-0068389-00 + invalid codes (e.g. outside of branch range) + handle defunct banks
@@ -119,3 +123,5 @@ test.each([
 
 // https://github.com/wytlytningNZ/NZ-Bank-Account-Validator/blob/master/test/library.spec.js
 // https://jestjs.io/docs/en/next/api.html#testeachtable-name-fn
+
+// https://www.asb.co.nz/help/how-do-i-move-my-money-to-new-zealand.html
