@@ -2,7 +2,7 @@ import generate from "../src/generate";
 
 test("throws exception when given invalid bank account number", () => {
   expect(() => {
-    let accountNumberThatWillFailChecksumValidation = "01-0001-0000001-000";
+    const accountNumberThatWillFailChecksumValidation = "01-0001-0000001-000";
     generate(accountNumberThatWillFailChecksumValidation);
   }).toThrow("Error: Invalid account number 01-0001-0000001-000");
 });
