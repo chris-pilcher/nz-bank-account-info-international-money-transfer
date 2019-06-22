@@ -2,107 +2,93 @@ import generate from "../src/generate";
 
 test("throws exception when given invalid bank account number", () => {
   expect(() => {
-    generate("44-1234-0012345-00");
-  }).toThrow(
-    "Error: Unknown bank 44. Known banks are ANZ (01) BNZ (02) Westpac (03) National Bank of New Zealand " +
-      "(06) National Australia Bank (08) Industrial and Commercial Bank of China (10) ASB (12) TSB (15) HSBC (30) " +
-      "Citibank (31) Kiwibank (38)"
-  );
+    let accountNumberThatWillFailChecksumValidation = "01-0001-0000001-000";
+    generate(accountNumberThatWillFailChecksumValidation);
+  }).toThrow("Error: Invalid account number 01-0001-0000001-000");
 });
 
 // TODO: test cases such as: 01-902-0068389-00 + invalid codes (e.g. outside of branch range) + handle defunct banks
 
 test.each([
   [
-    "01-0001-0000001-000",
+    "01-0001-0000002-000",
     {
       name: "ANZ",
       swift: "ANZBNZ22",
       address:
         "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
-      beneficiaryAccount: "01-0001-0000001-000",
-      bsbSortCode: "01-0001",
-      iban: "01-0001-0000001-000"
+      beneficiaryAccount: "0100010000002000",
+      bsbSortCode: "010001",
+      iban: "0100010000002000"
     }
   ],
   [
-    "02-0001-0000001-000",
+    "02-0001-0000002-000",
     {
       name: "BNZ",
       swift: "BKNZNZ22",
       address: "Bank of New Zealand, Wellington, New Zealand",
-      beneficiaryAccount: "02-0001-0000001-000",
-      bsbSortCode: "02-0001",
-      iban: "02-0001-0000001-000"
+      beneficiaryAccount: "0200010000002000",
+      bsbSortCode: "020001",
+      iban: "0200010000002000"
     }
   ],
   [
-    "03-0001-0000001-000",
+    "03-0001-0000002-000",
     {
       name: "Westpac",
       swift: "WPACNZ2W",
-      address: "Westpac New Zealand Limited, Auckland, New Zealand",
-      beneficiaryAccount: "03-0001-0000001-000",
-      bsbSortCode: "03-0001",
-      iban: "03-0001-0000001-000"
-    }
-  ],
-  [
-    "10-5165-0000001-000",
-    {
-      name: "Industrial and Commercial Bank of China",
-      swift: "ICBKNZ2A",
       address:
-        "Industrial and Commercial Bank of China Ltd, Level 22/188 Quay St, Auckland 1142, New Zealand",
-      beneficiaryAccount: "10-5165-0000001-000",
-      bsbSortCode: "10-5165",
-      iban: "10-5165-0000001-000"
+        "Registered office, Westpac New Zealand Limited, Auckland, New Zealand",
+      beneficiaryAccount: "0300010000002000",
+      bsbSortCode: "030001",
+      iban: "0300010000002000"
     }
   ],
   [
-    "12-3000-0000001-000",
+    "12-3000-0000004-000",
     {
       name: "ASB",
       swift: "ASBBNZ2A",
       address:
         "ASB Bank Limited, 12 Jellicoe Street, Auckland Central, Auckland 1010, New Zealand",
-      beneficiaryAccount: "12-3000-0000001-000",
-      bsbSortCode: "12-3000",
-      iban: "12-3000-0000001-000"
+      beneficiaryAccount: "1230000000004000",
+      bsbSortCode: "123000",
+      iban: "1230000000004000"
     }
   ],
   [
-    "15-3900-0000001-000",
+    "15-3900-0000018-000",
     {
       name: "TSB",
       swift: "TSBANZ22",
       address: "TSB Centre, 120 Devon St East, New Plymouth 4310, New Zealand",
-      beneficiaryAccount: "15-3900-0000001-000",
-      bsbSortCode: "15-3900",
-      iban: "15-3900-0000001-000"
+      beneficiaryAccount: "1539000000018000",
+      bsbSortCode: "153900",
+      iban: "1539000000018000"
     }
   ],
   [
-    "30-2900-0000001-000",
+    "30-2900-0000005-000",
     {
       name: "HSBC",
       swift: "HSBCNZ2A",
       address:
         "The Hongkong and Shanghai Banking Corporation Limited, HSBC House, Level 9, 1 Queen Street, Auckland, New Zealand",
-      beneficiaryAccount: "30-2900-0000001-000",
-      bsbSortCode: "30-2900",
-      iban: "30-2900-0000001-000"
+      beneficiaryAccount: "3029000000005000",
+      bsbSortCode: "302900",
+      iban: "3029000000005000"
     }
   ],
   [
-    "31-2800-0000001-000",
+    "31-2800-0000001-000  ",
     {
       name: "Citibank",
       swift: "CITINZ2X",
       address: "CitiBank, Level 7/23 Customs St E, Auckland 1010, New Zealand",
-      beneficiaryAccount: "31-2800-0000001-000",
-      bsbSortCode: "31-2800",
-      iban: "31-2800-0000001-000"
+      beneficiaryAccount: "3128000000001000",
+      bsbSortCode: "312800",
+      iban: "3128000000001000"
     }
   ],
   [
@@ -112,16 +98,11 @@ test.each([
       swift: "KIWINZ22",
       address:
         "Kiwibank Limited, Ground Floor, New Zealand Post House, 7 Waterloo Quay, Wellington 6011, New Zealand",
-      beneficiaryAccount: "38-9000-0000001-000",
-      bsbSortCode: "38-9000",
-      iban: "38-9000-0000001-000"
+      beneficiaryAccount: "3890000000001000",
+      bsbSortCode: "389000",
+      iban: "3890000000001000"
     }
   ]
 ])("generate(%s) returns expected", (accountNumber, expected) => {
   expect(generate(accountNumber)).toEqual(expected);
 });
-
-// https://github.com/wytlytningNZ/NZ-Bank-Account-Validator/blob/master/test/library.spec.js
-// https://jestjs.io/docs/en/next/api.html#testeachtable-name-fn
-
-// https://www.asb.co.nz/help/how-do-i-move-my-money-to-new-zealand.html

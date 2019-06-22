@@ -15,20 +15,9 @@ const bankMapping = {
   "03": {
     name: "Westpac",
     swift: "WPACNZ2W",
-    address: "Westpac New Zealand Limited, Auckland, New Zealand"
-  }, // Can also be NZ credit union/Rabobank
-  "06": {
-    name: "National Bank of New Zealand",
-    swift: "TODO",
-    address: "[TODO]"
-  }, // ?? Defunct??
-  "08": { name: "National Australia Bank", swift: "TODO", address: "[TODO]" }, // ??? Who is this ?
-  "10": {
-    name: "Industrial and Commercial Bank of China",
-    swift: "ICBKNZ2A",
     address:
-      "Industrial and Commercial Bank of China Ltd, Level 22/188 Quay St, Auckland 1142, New Zealand"
-  },
+      "Registered office, Westpac New Zealand Limited, Auckland, New Zealand"
+  }, // Can also be NZ credit union/Rabobank
   "12": {
     name: "ASB",
     swift: "ASBBNZ2A",
@@ -60,13 +49,19 @@ const bankMapping = {
 };
 
 export default function generate(accountNumber) {
-  bankValidator.validate(accountNumber);
+  const isValid = bankValidator.validate(accountNumber);
+  if (!isValid) {
+    throw new Error(`Error: Invalid account number ${accountNumber}`);
+  }
 
-  const [bank, branch, account, suffix] = accountNumber.split("-"); // TODO: use bankValidator
-  const bankDetails = bankMapping[bank];
+  const parts = bankValidator.getPartsObject(accountNumber);
+  const bankDetails = bankMapping[parts.id];
+
   if (!bankDetails) {
     throw new Error(
-      `Error: Unknown bank ${bank}. Known banks are ${Object.keys(bankMapping)
+      `Error: Unknown bank ${parts.id}. Known banks are ${Object.keys(
+        bankMapping
+      )
         .sort()
         .map(bankKey => `${bankMapping[bankKey].name} (${bankKey})`)
         .join(" ")}`
@@ -75,8 +70,8 @@ export default function generate(accountNumber) {
 
   return {
     ...bankDetails,
-    beneficiaryAccount: `${bank}-${branch}-${account}-${suffix}`,
-    bsbSortCode: `${bank}-${branch}`,
-    iban: `${bank}-${branch}-${account}-${suffix}`
+    beneficiaryAccount: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`,
+    bsbSortCode: `${parts.id}${parts.branch}`,
+    iban: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`
   };
 }
