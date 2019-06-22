@@ -6,12 +6,6 @@ test("throws exception when given invalid bank account number", () => {
   }).toThrow();
 });
 
-test("does not throw exception when given unknown bank account", () => {
-  expect(() => {
-    generate("01-902-0068389-00");
-  }).not.toThrow();
-});
-
 // TODO: test cases such as: 01-902-0068389-00 + invalid codes (e.g. outside of branch range) + handle defunct banks
 
 test.each([
