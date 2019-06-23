@@ -10,12 +10,12 @@ A small JavaScript library to generate information needed for an International M
 ## Getting Started
 
 Using npm:
-```bash
+```
 npm install --save nz-bank-account-info-international-money-transfer
 ```
 
 Using yarn:
-```bash
+```
 yarn add nz-bank-account-info-international-money-transfer
 ```
 
