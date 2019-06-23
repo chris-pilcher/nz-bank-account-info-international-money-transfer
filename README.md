@@ -26,8 +26,6 @@ In Node.js (require):
 const generator = require("nz-bank-account-info-international-money-transfer");
 generator.generate('01-0001-0000002-000');
 ```
-[Test with RunKit](https://runkit.com/embed/4mgsw2nmcm4v)
-
 ES6 Modules:
 ```javascript
 import generator from 'nz-bank-account-info-international-money-transfer';
@@ -38,6 +36,25 @@ In a browser:
 ```javascript
 // TODO
 ```
+## Sample Output
+
+```javascript
+generator.generate('01-0001-0000002-000');
+```
+
+Result:
+```JSON
+{
+   "address":"ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
+   "beneficiaryAccount":"0100010000002000",
+   "bsbSortCode":"010001",
+   "iban":"0100010000002000",
+   "name":"ANZ",
+   "swift":"ANZBNZ22"
+}
+```
+
+[Test with RunKit](https://runkit.com/embed/4mgsw2nmcm4v)
 
 ## Development
 
