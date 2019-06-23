@@ -48,7 +48,7 @@ const bankMapping = {
   }
 };
 
-export default function generate(accountNumber) {
+export function generate(accountNumber) {
   const isValid = bankValidator.validate(accountNumber);
   if (!isValid) {
     throw new Error(`Error: Invalid account number ${accountNumber}`);
