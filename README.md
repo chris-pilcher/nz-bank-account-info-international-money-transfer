@@ -55,8 +55,6 @@ Result:
 }
 ```
 
-[Test with RunKit](https://runkit.com/npm/nz-bank-account-info-international-money-transfer)
-
 ## Development
 
 `npm install`
