@@ -28,14 +28,14 @@ In a browser:
 
 In Node.js (require):
 ```javascript
-const accountGenerator = require("nz-bank-account-info-international-money-transfer")
-accountGenerator.generate('01-0001-0000002-000');
+const generator = require("nz-bank-account-info-international-money-transfer")
+generator.generate('01-0001-0000002-000');
 ```
 
 ES6 Modules:
 ```javascript
-import accountGenerator from 'nz-bank-account-info-international-money-transfer';
-accountGenerator.generate('01-0001-0000002-000');
+import generator from 'nz-bank-account-info-international-money-transfer';
+generator.generate('01-0001-0000002-000');
 ```
 
 ## Development

@@ -1,4 +1,4 @@
-import generate from "../src/generate";
+import { generate } from "../src/generate";
 
 test.each([
   ["01-0001-0000001-000", "Error: Invalid account number 01-0001-0000001-000"], // This will fail checksum validation
