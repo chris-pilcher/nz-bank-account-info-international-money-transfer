@@ -28,7 +28,7 @@ In a browser:
 
 In Node.js (require):
 ```javascript
-const generator = require("nz-bank-account-info-international-money-transfer")
+const generator = require("nz-bank-account-info-international-money-transfer");
 generator.generate('01-0001-0000002-000');
 ```
 
