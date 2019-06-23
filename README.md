@@ -61,7 +61,7 @@ npm run lint
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 [npm-image]: https://img.shields.io/npm/v/nz-bank-account-info-international-money-transfer.svg
 [npm-url]: https://www.npmjs.com/package/nz-bank-account-info-international-money-transfer
