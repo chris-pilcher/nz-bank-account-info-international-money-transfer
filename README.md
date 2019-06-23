@@ -21,16 +21,12 @@ yarn add nz-bank-account-info-international-money-transfer
 
 ## Usage
 
-In a browser: 
-```javascript
-// TODO
-```
-
 In Node.js (require):
 ```javascript
 const generator = require("nz-bank-account-info-international-money-transfer");
 generator.generate('01-0001-0000002-000');
 ```
+
 ES6 Modules:
 ```javascript
 import generator from 'nz-bank-account-info-international-money-transfer';
@@ -39,11 +35,8 @@ generator.generate('01-0001-0000002-000');
 
 ## Sample Output
 
-```javascript
-generator.generate('01-0001-0000002-000');
-```
+The result of running `generator.generate('01-0001-0000002-000');`:
 
-Result:
 ```javascript
 {
    "address":"ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
@@ -55,17 +48,20 @@ Result:
 }
 ```
 
-## Development
+## Running Tests
 
-`npm install`
+To run the tests locally:
 
-`npm install jest --global`
+```
+npm install jest --global
+npm install
+npm run test
+npm run lint
+```
 
-`npm run test`
+## License
 
-`npm run lint`
-
-[Release Process](RELEASE-PROCESS.md)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 [npm-image]: https://img.shields.io/npm/v/nz-bank-account-info-international-money-transfer.svg
 [npm-url]: https://www.npmjs.com/package/nz-bank-account-info-international-money-transfer
