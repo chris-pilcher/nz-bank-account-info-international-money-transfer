@@ -39,7 +39,7 @@ generator.generate("01-0001-0000002-000");
 
 ## Sample Output
 
-The result of running `generator.generate('01-0001-0000002-000');`:
+The result of running `generator.generate('01-0001-0000002-000')`:
 
 ```javascript
 {
