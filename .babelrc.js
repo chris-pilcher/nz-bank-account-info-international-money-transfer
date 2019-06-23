@@ -1,3 +1,7 @@
 const presets = [["@babel/preset-env", { targets: { node: "current" } }]];
+const plugins = ["@babel/plugin-transform-spread"];
 
-module.exports = { presets };
+module.exports = {
+  plugins,
+  presets
+};

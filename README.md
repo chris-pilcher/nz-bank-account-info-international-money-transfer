@@ -10,11 +10,13 @@ A small JavaScript library to generate information needed for an International M
 ## Getting Started
 
 Using npm:
+
 ```
 npm install --save nz-bank-account-info-international-money-transfer
 ```
 
 Using yarn:
+
 ```
 yarn add nz-bank-account-info-international-money-transfer
 ```
@@ -22,15 +24,17 @@ yarn add nz-bank-account-info-international-money-transfer
 ## Usage
 
 In Node.js (require):
+
 ```javascript
 const generator = require("nz-bank-account-info-international-money-transfer");
-generator.generate('01-0001-0000002-000');
+generator.generate("01-0001-0000002-000");
 ```
 
 ES6 Modules:
+
 ```javascript
-import generator from 'nz-bank-account-info-international-money-transfer';
-generator.generate('01-0001-0000002-000');
+import generator from "nz-bank-account-info-international-money-transfer";
+generator.generate("01-0001-0000002-000");
 ```
 
 ## Sample Output
