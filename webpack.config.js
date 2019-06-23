@@ -8,7 +8,8 @@ module.exports = {
     filename: "index.js",
     library: "nz-bank-account-info-international-money-transfer",
     libraryTarget: "umd",
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    globalObject: "this"
   },
   module: {
     rules: [
