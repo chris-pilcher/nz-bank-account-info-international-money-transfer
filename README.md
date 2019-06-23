@@ -33,7 +33,7 @@ generator.generate("01-0001-0000002-000");
 ES6 Modules:
 
 ```javascript
-import generator from "nz-bank-account-info-international-money-transfer";
+import * as generator from "nz-bank-account-info-international-money-transfer";
 generator.generate("01-0001-0000002-000");
 ```
 
