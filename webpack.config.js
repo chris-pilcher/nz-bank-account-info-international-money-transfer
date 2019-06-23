@@ -4,7 +4,7 @@ module.exports = {
     path: __dirname + "/lib",
     filename: "index.js",
     library: "nz-bank-account-info-international-money-transfer",
-    libraryTarget: "umd"
+    libraryTarget: "commonjs2"
   },
   module: {
     rules: [
