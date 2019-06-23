@@ -43,7 +43,7 @@ generator.generate('01-0001-0000002-000');
 ```
 
 Result:
-```JSON
+```javascript
 {
    "address":"ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
    "beneficiaryAccount":"0100010000002000",
