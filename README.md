@@ -21,6 +21,11 @@ yarn add nz-bank-account-info-international-money-transfer
 
 ## Usage
 
+In a browser: 
+```javascript
+// TODO
+```
+
 In Node.js (require):
 ```javascript
 const generator = require("nz-bank-account-info-international-money-transfer");
@@ -32,10 +37,6 @@ import generator from 'nz-bank-account-info-international-money-transfer';
 generator.generate('01-0001-0000002-000');
 ```
 
-In a browser: 
-```javascript
-// TODO
-```
 ## Sample Output
 
 ```javascript
@@ -54,7 +55,7 @@ Result:
 }
 ```
 
-[Test with RunKit](https://runkit.com/embed/4mgsw2nmcm4v)
+[Test with RunKit](https://runkit.com/npm/nz-bank-account-info-international-money-transfer)
 
 ## Development
 
