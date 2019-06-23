@@ -59,7 +59,7 @@ export default function generate(accountNumber) {
 
   if (!bankDetails) {
     throw new Error(
-      `Error: Unknown bank ${parts.id}. Known banks are ${Object.keys(
+      `Error: Unknown bank (${parts.id}). Known banks are ${Object.keys(
         bankMapping
       )
         .sort()

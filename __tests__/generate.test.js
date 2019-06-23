@@ -1,11 +1,17 @@
 import generate from "../src/generate";
 
-test("throws exception when given invalid bank account number", () => {
-  expect(() => {
-    const accountNumberThatWillFailChecksumValidation = "01-0001-0000001-000";
-    generate(accountNumberThatWillFailChecksumValidation);
-  }).toThrow("Error: Invalid account number 01-0001-0000001-000");
-});
+test.each([
+  ["01-0001-0000001-000", "Error: Invalid account number 01-0001-0000001-000"], // This will fail checksum validation
+  [
+    "11-5000-0000003-00",
+    "Error: Unknown bank (11). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Citibank (31) Kiwibank (38)"
+  ] // PostBank (11) is defunct
+])(
+  "generate(%s) throws exception when given invalid or unknown bank account numbers",
+  (accountNumber, expected) => {
+    expect(() => generate(accountNumber)).toThrow(expected);
+  }
+);
 
 // TODO: test cases such as: 01-902-0068389-00 + invalid codes (e.g. outside of branch range) + handle defunct banks
 
