@@ -7,19 +7,36 @@
 
 A small JavaScript library to generate information needed for an International Money Transfer to a New Zealand bank account.
 
-## Installation
+## Getting Started
 
+Using npm:
 ```
 npm install --save nz-bank-account-info-international-money-transfer
 ```
 
-or
-
+Using yarn:
 ```
 yarn add nz-bank-account-info-international-money-transfer
 ```
 
 ## Usage
+
+In a browser: 
+```javascript
+// TODO
+```
+
+In Node.js (require):
+```javascript
+const accountGenerator = require("nz-bank-account-info-international-money-transfer")
+accountGenerator.generate('01-0001-0000002-000');
+```
+
+ES6 Modules:
+```javascript
+import accountGenerator from 'nz-bank-account-info-international-money-transfer';
+accountGenerator.generate('01-0001-0000002-000');
+```
 
 ## Development
 
@@ -28,6 +45,10 @@ yarn add nz-bank-account-info-international-money-transfer
 `npm install jest --global`
 
 `npm run test`
+
+`npm run lint`
+
+[Release Process](RELEASE-PROCESS.md)
 
 [npm-image]: https://img.shields.io/npm/v/nz-bank-account-info-international-money-transfer.svg
 [npm-url]: https://www.npmjs.com/package/nz-bank-account-info-international-money-transfer
