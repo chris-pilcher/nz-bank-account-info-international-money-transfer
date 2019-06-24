@@ -20,7 +20,7 @@ test.each([
     "01-0001-0000002-000",
     {
       bankName: "ANZ",
-      swift: "ANZBNZ22",
+      SWIFT: "ANZBNZ22",
       bankAddress:
         "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
       account: "0100010000002000",
@@ -33,7 +33,7 @@ test.each([
     "02-0001-0000002-000",
     {
       bankName: "BNZ",
-      swift: "BKNZNZ22",
+      SWIFT: "BKNZNZ22",
       bankAddress: "Bank of New Zealand, Wellington, New Zealand",
       account: "0200010000002000",
       BSB: "020001",
@@ -45,7 +45,7 @@ test.each([
     "03-0001-0000002-000",
     {
       bankName: "Westpac",
-      swift: "WPACNZ2W",
+      SWIFT: "WPACNZ2W",
       bankAddress:
         "Registered office, Westpac New Zealand Limited, Auckland, New Zealand",
       account: "0300010000002000",
@@ -58,7 +58,7 @@ test.each([
     "12-3000-0000004-000",
     {
       bankName: "ASB",
-      swift: "ASBBNZ2A",
+      SWIFT: "ASBBNZ2A",
       bankAddress:
         "ASB Bank Limited, 12 Jellicoe Street, Auckland Central, Auckland 1010, New Zealand",
       account: "1230000000004000",
@@ -71,7 +71,7 @@ test.each([
     "15-3900-0000018-000",
     {
       bankName: "TSB",
-      swift: "TSBANZ22",
+      SWIFT: "TSBANZ22",
       bankAddress:
         "TSB Centre, 120 Devon St East, New Plymouth 4310, New Zealand",
       account: "1539000000018000",
@@ -84,7 +84,7 @@ test.each([
     "30-2900-0000005-000",
     {
       bankName: "HSBC",
-      swift: "HSBCNZ2A",
+      SWIFT: "HSBCNZ2A",
       bankAddress:
         "The Hongkong and Shanghai Banking Corporation Limited, HSBC House, Level 9, 1 Queen Street, Auckland, New Zealand",
       account: "3029000000005000",
@@ -97,7 +97,7 @@ test.each([
     "31-2800-0000001-000",
     {
       bankName: "Citibank",
-      swift: "CITINZ2X",
+      SWIFT: "CITINZ2X",
       bankAddress:
         "CitiBank, Level 7/23 Customs St E, Auckland 1010, New Zealand",
       account: "3128000000001000",
@@ -110,7 +110,7 @@ test.each([
     "38-9000-0000001-000",
     {
       bankName: "Kiwibank",
-      swift: "KIWINZ22",
+      SWIFT: "KIWINZ22",
       bankAddress:
         "Kiwibank Limited, Ground Floor, New Zealand Post House, 7 Waterloo Quay, Wellington 6011, New Zealand",
       account: "3890000000001000",
