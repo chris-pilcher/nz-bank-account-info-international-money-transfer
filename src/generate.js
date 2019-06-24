@@ -63,13 +63,17 @@ export function generate(accountNumber) {
   }
 
   const parts = bankValidator.getPartsObject(accountNumber);
-  const bankDetails = bankMapping[parts.id];
+  const [bank, branch, account, suffix] = [
+    parts.id.padStart(2, "0"),
+    parts.branch.padStart(4, "0"),
+    parts.base.padStart(7, "0"),
+    parts.suffix.padStart(3, "0")
+  ];
+  const bankDetails = bankMapping[bank];
 
   if (!bankDetails) {
     throw new Error(
-      `Error: Unknown bank (${parts.id}). Known banks are ${Object.keys(
-        bankMapping
-      )
+      `Error: Unknown bank (${bank}). Known banks are ${Object.keys(bankMapping)
         .sort()
         .map(bankKey => `${bankMapping[bankKey].bankName} (${bankKey})`)
         .join(" ")}`
@@ -78,9 +82,9 @@ export function generate(accountNumber) {
 
   return {
     ...bankDetails,
-    account: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`,
-    BSB: `${parts.id}${parts.branch}`,
-    IBAN: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`,
-    sortCode: `${parts.id}${parts.branch}`
+    account: `${bank}${branch}${account}${suffix}`,
+    BSB: `${bank}${branch}`,
+    IBAN: `${bank}${branch}${account}${suffix}`,
+    sortCode: `${bank}${branch}`
   };
 }

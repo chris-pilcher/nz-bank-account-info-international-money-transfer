@@ -118,6 +118,19 @@ test.each([
       sortCode: "389000",
       IBAN: "3890000000001000"
     }
+  ],
+  [
+    "1-001-00002-00",
+    {
+      bankName: "ANZ",
+      SWIFT: "ANZBNZ22",
+      bankAddress:
+        "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
+      account: "0100010000002000",
+      BSB: "010001",
+      sortCode: "010001",
+      IBAN: "0100010000002000"
+    }
   ]
 ])("generate(%s) returns expected", (accountNumber, expected) => {
   expect(generate(accountNumber)).toEqual(expected);
