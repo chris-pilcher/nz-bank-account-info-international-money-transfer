@@ -6,6 +6,10 @@ Steps to create a release `x.y.z` using [GitHub Desktop](https://desktop.github.
 
 - Checkout `develop` branch
 - Open code editor and update `version` in `package.json` to `x.y.z`
+  - Alternatively, update via npm:
+    - Major: `npm version major`
+    - Minor: `npm version minor`
+    - Patch: `npm version patch`
 - Push <kbd>Ctrl</kbd> + <kbd>P</kbd>
 
 ## Step 2. Merge changes from `develop` into `master`
