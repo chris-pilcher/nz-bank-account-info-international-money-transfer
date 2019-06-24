@@ -2,49 +2,51 @@ import bankValidator from "nz-bank-account-validator/lib/NZ-Bank-Account-Validat
 
 const bankMapping = {
   "01": {
-    name: "ANZ",
-    swift: "ANZBNZ22",
-    address:
-      "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand"
+    bankAddress:
+      "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
+    bankName: "ANZ",
+    swift: "ANZBNZ22"
   },
   "02": {
-    name: "BNZ",
-    swift: "BKNZNZ22",
-    address: "Bank of New Zealand, Wellington, New Zealand"
+    bankAddress: "Bank of New Zealand, Wellington, New Zealand",
+    bankName: "BNZ",
+    swift: "BKNZNZ22"
   }, // Can also be "The Co-operative Bank" worry about this later
   "03": {
-    name: "Westpac",
-    swift: "WPACNZ2W",
-    address:
-      "Registered office, Westpac New Zealand Limited, Auckland, New Zealand"
+    bankAddress:
+      "Registered office, Westpac New Zealand Limited, Auckland, New Zealand",
+    bankName: "Westpac",
+    swift: "WPACNZ2W"
   }, // Can also be NZ credit union/Rabobank
   "12": {
-    name: "ASB",
-    swift: "ASBBNZ2A",
-    address:
-      "ASB Bank Limited, 12 Jellicoe Street, Auckland Central, Auckland 1010, New Zealand"
+    bankAddress:
+      "ASB Bank Limited, 12 Jellicoe Street, Auckland Central, Auckland 1010, New Zealand",
+    bankName: "ASB",
+    swift: "ASBBNZ2A"
   },
   "15": {
-    name: "TSB",
-    swift: "TSBANZ22",
-    address: "TSB Centre, 120 Devon St East, New Plymouth 4310, New Zealand"
+    bankAddress:
+      "TSB Centre, 120 Devon St East, New Plymouth 4310, New Zealand",
+    bankName: "TSB",
+    swift: "TSBANZ22"
   },
   "30": {
-    name: "HSBC",
-    swift: "HSBCNZ2A",
-    address:
-      "The Hongkong and Shanghai Banking Corporation Limited, HSBC House, Level 9, 1 Queen Street, Auckland, New Zealand"
+    bankAddress:
+      "The Hongkong and Shanghai Banking Corporation Limited, HSBC House, Level 9, 1 Queen Street, Auckland, New Zealand",
+    bankName: "HSBC",
+    swift: "HSBCNZ2A"
   },
   "31": {
-    name: "Citibank",
-    swift: "CITINZ2X",
-    address: "CitiBank, Level 7/23 Customs St E, Auckland 1010, New Zealand"
+    bankAddress:
+      "CitiBank, Level 7/23 Customs St E, Auckland 1010, New Zealand",
+    bankName: "Citibank",
+    swift: "CITINZ2X"
   },
   "38": {
-    name: "Kiwibank",
-    swift: "KIWINZ22",
-    address:
-      "Kiwibank Limited, Ground Floor, New Zealand Post House, 7 Waterloo Quay, Wellington 6011, New Zealand"
+    bankAddress:
+      "Kiwibank Limited, Ground Floor, New Zealand Post House, 7 Waterloo Quay, Wellington 6011, New Zealand",
+    bankName: "Kiwibank",
+    swift: "KIWINZ22"
   }
 };
 
@@ -69,15 +71,16 @@ export function generate(accountNumber) {
         bankMapping
       )
         .sort()
-        .map(bankKey => `${bankMapping[bankKey].name} (${bankKey})`)
+        .map(bankKey => `${bankMapping[bankKey].bankName} (${bankKey})`)
         .join(" ")}`
     );
   }
 
   return {
     ...bankDetails,
-    beneficiaryAccount: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`,
-    bsbSortCode: `${parts.id}${parts.branch}`,
-    iban: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`
+    account: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`,
+    BSB: `${parts.id}${parts.branch}`,
+    IBAN: `${parts.id}${parts.branch}${parts.base}${parts.suffix}`,
+    sortCode: `${parts.id}${parts.branch}`
   };
 }

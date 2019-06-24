@@ -19,94 +19,104 @@ test.each([
   [
     "01-0001-0000002-000",
     {
-      name: "ANZ",
+      bankName: "ANZ",
       swift: "ANZBNZ22",
-      address:
+      bankAddress:
         "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
-      beneficiaryAccount: "0100010000002000",
-      bsbSortCode: "010001",
-      iban: "0100010000002000"
+      account: "0100010000002000",
+      BSB: "010001",
+      sortCode: "010001",
+      IBAN: "0100010000002000"
     }
   ],
   [
     "02-0001-0000002-000",
     {
-      name: "BNZ",
+      bankName: "BNZ",
       swift: "BKNZNZ22",
-      address: "Bank of New Zealand, Wellington, New Zealand",
-      beneficiaryAccount: "0200010000002000",
-      bsbSortCode: "020001",
-      iban: "0200010000002000"
+      bankAddress: "Bank of New Zealand, Wellington, New Zealand",
+      account: "0200010000002000",
+      BSB: "020001",
+      sortCode: "020001",
+      IBAN: "0200010000002000"
     }
   ],
   [
     "03-0001-0000002-000",
     {
-      name: "Westpac",
+      bankName: "Westpac",
       swift: "WPACNZ2W",
-      address:
+      bankAddress:
         "Registered office, Westpac New Zealand Limited, Auckland, New Zealand",
-      beneficiaryAccount: "0300010000002000",
-      bsbSortCode: "030001",
-      iban: "0300010000002000"
+      account: "0300010000002000",
+      BSB: "030001",
+      sortCode: "030001",
+      IBAN: "0300010000002000"
     }
   ],
   [
     "12-3000-0000004-000",
     {
-      name: "ASB",
+      bankName: "ASB",
       swift: "ASBBNZ2A",
-      address:
+      bankAddress:
         "ASB Bank Limited, 12 Jellicoe Street, Auckland Central, Auckland 1010, New Zealand",
-      beneficiaryAccount: "1230000000004000",
-      bsbSortCode: "123000",
-      iban: "1230000000004000"
+      account: "1230000000004000",
+      BSB: "123000",
+      sortCode: "123000",
+      IBAN: "1230000000004000"
     }
   ],
   [
     "15-3900-0000018-000",
     {
-      name: "TSB",
+      bankName: "TSB",
       swift: "TSBANZ22",
-      address: "TSB Centre, 120 Devon St East, New Plymouth 4310, New Zealand",
-      beneficiaryAccount: "1539000000018000",
-      bsbSortCode: "153900",
-      iban: "1539000000018000"
+      bankAddress:
+        "TSB Centre, 120 Devon St East, New Plymouth 4310, New Zealand",
+      account: "1539000000018000",
+      BSB: "153900",
+      sortCode: "153900",
+      IBAN: "1539000000018000"
     }
   ],
   [
     "30-2900-0000005-000",
     {
-      name: "HSBC",
+      bankName: "HSBC",
       swift: "HSBCNZ2A",
-      address:
+      bankAddress:
         "The Hongkong and Shanghai Banking Corporation Limited, HSBC House, Level 9, 1 Queen Street, Auckland, New Zealand",
-      beneficiaryAccount: "3029000000005000",
-      bsbSortCode: "302900",
-      iban: "3029000000005000"
+      account: "3029000000005000",
+      BSB: "302900",
+      sortCode: "302900",
+      IBAN: "3029000000005000"
     }
   ],
   [
     "31-2800-0000001-000",
     {
-      name: "Citibank",
+      bankName: "Citibank",
       swift: "CITINZ2X",
-      address: "CitiBank, Level 7/23 Customs St E, Auckland 1010, New Zealand",
-      beneficiaryAccount: "3128000000001000",
-      bsbSortCode: "312800",
-      iban: "3128000000001000"
+      bankAddress:
+        "CitiBank, Level 7/23 Customs St E, Auckland 1010, New Zealand",
+      account: "3128000000001000",
+      BSB: "312800",
+      sortCode: "312800",
+      IBAN: "3128000000001000"
     }
   ],
   [
     "38-9000-0000001-000",
     {
-      name: "Kiwibank",
+      bankName: "Kiwibank",
       swift: "KIWINZ22",
-      address:
+      bankAddress:
         "Kiwibank Limited, Ground Floor, New Zealand Post House, 7 Waterloo Quay, Wellington 6011, New Zealand",
-      beneficiaryAccount: "3890000000001000",
-      bsbSortCode: "389000",
-      iban: "3890000000001000"
+      account: "3890000000001000",
+      BSB: "389000",
+      sortCode: "389000",
+      IBAN: "3890000000001000"
     }
   ]
 ])("generate(%s) returns expected", (accountNumber, expected) => {
