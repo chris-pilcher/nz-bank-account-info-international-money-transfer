@@ -48,6 +48,12 @@ const bankMapping = {
   }
 };
 
+/**
+ * Generates the information required for an international money transfer to the specified New Zealand bank account number.
+ *
+ * @param {String} accountNumber
+ * @return {Object}
+ */
 export function generate(accountNumber) {
   const isValid = bankValidator.validate(accountNumber);
   if (!isValid) {
