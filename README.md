@@ -43,12 +43,13 @@ The result of running `generator.generate('01-0001-0000002-000')`:
 
 ```javascript
 {
-   "address":"ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
-   "beneficiaryAccount":"0100010000002000",
-   "bsbSortCode":"010001",
-   "iban":"0100010000002000",
-   "name":"ANZ",
-   "swift":"ANZBNZ22"
+   "BSB":"010001",
+   "IBAN":"0100010000002000",
+   "SWIFT":"ANZBNZ22",
+   "account":"0100010000002000",
+   "bankAddress":"ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
+   "bankName":"ANZ",
+   "sortCode":"010001"
 }
 ```
 
