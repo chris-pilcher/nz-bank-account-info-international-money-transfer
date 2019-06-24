@@ -5,7 +5,7 @@
 [![Travis CI][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
-A small JavaScript library to generate information needed for an International Money Transfer to a New Zealand bank account.
+A small JavaScript library to generate information needed for an international money transfer to a New Zealand bank account.
 
 ## Getting Started
 
