@@ -5,7 +5,7 @@ import { bankMapping } from "./banks";
  * Generates the information required for an international money transfer to the specified New Zealand bank account number.
  *
  * @param {String} accountNumber
- * @return {Object}
+ * @return {Object} the bank details
  */
 function generate(accountNumber) {
   const isValid = bankValidator.validate(accountNumber);
@@ -22,14 +22,22 @@ function generate(accountNumber) {
   ];
   const bankDetails = bankMapping[bank];
 
-  if (!bankDetails) {
+  if (
+    !bankDetails ||
+    (bankDetails.excludedBranches &&
+      bankDetails.excludedBranches.includes(branch))
+  ) {
     throw new Error(
-      `Error: Unknown bank (${bank}). Known banks are ${Object.keys(bankMapping)
+      `Error: Unknown bank (${bank}) or branch (${branch}). Known banks are ${Object.keys(
+        bankMapping
+      )
         .sort()
         .map(bankKey => `${bankMapping[bankKey].bankName} (${bankKey})`)
         .join(" ")}`
     );
   }
+
+  delete bankDetails.excludedBranches;
 
   return {
     ...bankDetails,

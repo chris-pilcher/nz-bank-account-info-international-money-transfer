@@ -3,8 +3,36 @@ import generate from "../src/generator";
 test.each([
   ["01-0001-0000001-000", "Error: Invalid account number 01-0001-0000001-000"], // This will fail checksum validation
   [
+    "02-1242-0000008-000",
+    "Error: Unknown bank (02) or branch (1242). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
+  ], // The Co-operative Bank is excluded from BNZ range
+  [
+    "02-1245-0000003-000",
+    "Error: Unknown bank (02) or branch (1245). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
+  ], // The Co-operative Bank is excluded from BNZ range
+  [
+    "02-1246-0000005-000",
+    "Error: Unknown bank (02) or branch (1246). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
+  ], // The Co-operative Bank is excluded from BNZ range
+  [
+    "02-1247-0000007-000",
+    "Error: Unknown bank (02) or branch (1247). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
+  ], // The Co-operative Bank is excluded from BNZ range
+  [
+    "02-1248-0000009-000",
+    "Error: Unknown bank (02) or branch (1248). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
+  ], // The Co-operative Bank is excluded from BNZ range
+  [
+    "02-1249-0000000-000",
+    "Error: Unknown bank (02) or branch (1249). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
+  ], // The Co-operative Bank is excluded from BNZ range
+  [
+    "02-1250-0000008-000",
+    "Error: Unknown bank (02) or branch (1250). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
+  ], // The Co-operative Bank is excluded from BNZ range
+  [
     "11-5000-0000003-00",
-    "Error: Unknown bank (11). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Citibank (31) Kiwibank (38)"
+    "Error: Unknown bank (11) or branch (5000). Known banks are ANZ (01) BNZ (02) Westpac (03) ASB (12) TSB (15) HSBC (30) Kiwibank (38)"
   ] // PostBank (11) is defunct
 ])(
   "generate(%s) throws exception when given invalid or unknown bank account numbers",
@@ -12,8 +40,6 @@ test.each([
     expect(() => generate(accountNumber)).toThrow(expected);
   }
 );
-
-// TODO: test cases such as: 01-902-0068389-00 + invalid codes (e.g. outside of branch range) + handle defunct banks
 
 test.each([
   [
@@ -91,19 +117,6 @@ test.each([
       BSB: "302900",
       sortCode: "302900",
       IBAN: "3029000000005000"
-    }
-  ],
-  [
-    "31-2800-0000001-000",
-    {
-      bankName: "Citibank",
-      SWIFT: "CITINZ2X",
-      bankAddress:
-        "CitiBank, Level 7/23 Customs St E, Auckland 1010, New Zealand",
-      account: "3128000000001000",
-      BSB: "312800",
-      sortCode: "312800",
-      IBAN: "3128000000001000"
     }
   ],
   [
