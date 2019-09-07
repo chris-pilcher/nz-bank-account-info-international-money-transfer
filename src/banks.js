@@ -3,7 +3,7 @@ const bankMapping = {
     bankAddress:
       "ANZ Bank New Zealand Ltd, Floor 10, 170-186 Featherston St, Wellington 6011, New Zealand",
     bankName: "ANZ",
-    SWIFT: "ANZBNZ22",
+    SWIFT: "ANZBNZ22"
   },
   "02": {
     bankAddress: "Bank of New Zealand, Wellington, New Zealand",
@@ -15,7 +15,7 @@ const bankMapping = {
     bankAddress:
       "Registered office, Westpac New Zealand Limited, Auckland, New Zealand",
     bankName: "Westpac",
-    SWIFT: "WPACNZ2W",
+    SWIFT: "WPACNZ2W"
   },
   "12": {
     bankAddress:
